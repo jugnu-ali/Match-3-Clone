@@ -16,7 +16,7 @@ public class Dot : MonoBehaviour
 
     private FindMatches findMatches;
     private Board board;
-    private GameObject otherDot;
+    public GameObject otherDot;
     private Vector2 firstTouchPosition;
     private Vector2 finalTouchPosition;
     private Vector2 tempPosition;
@@ -64,11 +64,11 @@ public class Dot : MonoBehaviour
     {
         //FindMatches();
 
-        if(isMatched)
+        /*if(isMatched)
         {
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.color = new Color(0f, 0f, 0f, 0.2f);
-        }
+        } */
 
         targetX = column;
         targetY = row;
@@ -129,6 +129,9 @@ public class Dot : MonoBehaviour
                 column = previousColumn;
 
                 yield return new WaitForSeconds(0.5f);
+
+                board.currentDot = null;
+
                 board.currentState = GameState.move;
             }
             else
@@ -170,6 +173,7 @@ public class Dot : MonoBehaviour
             MovePieces();
 
             board.currentState = GameState.wait;
+            board.currentDot = this;
         }
         else
         {
@@ -257,5 +261,19 @@ public class Dot : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void MakeRowBomb()
+    {
+        isRowBomb = true;
+        GameObject arrow = Instantiate(rowArrowPrefab, transform.position, Quaternion.identity);
+        arrow.transform.parent = this.transform;
+    }
+
+    public void MakeColumnBomb()
+    {
+        isColumnBomb = true;
+        GameObject arrow = Instantiate(columnArrowPrefab, transform.position, Quaternion.identity);
+        arrow.transform.parent = this.transform;
     }
 }
