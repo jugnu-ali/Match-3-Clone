@@ -121,9 +121,12 @@ MonoBehaviour:
   targetX: 0
   targetY: 0
   isMatched: 0
+  otherDot: {fileID: 0}
   swipeAngle: 0
   swipeResist: 1
+  isColorBomb: 0
   isColumnBomb: 0
   isRowBomb: 0
   rowArrowPrefab: {fileID: 9203293165197104762, guid: d4d363cea1f4b2d4ca9e5f45d6c8388d, type: 3}
   columnArrowPrefab: {fileID: 6136294295866354870, guid: 2ebfa9914b663914a9e4675fa45f4ab9, type: 3}
+  colorBomb: {fileID: 889050144701455313, guid: 173ea057567c1f64591fc79e3b0950a7, type: 3}

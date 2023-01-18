@@ -212,6 +212,7 @@ MonoBehaviour:
   - {fileID: 3151470164836158612, guid: 1730652e400cf6f48b62ad0433fb9573, type: 3}
   - {fileID: 2802406091377513433, guid: 22754410605f0b0488035ea0513f0b41, type: 3}
   - {fileID: 6083713309690800475, guid: 00da437644c2e6742b8ef7ccf040197d, type: 3}
+  currentDot: {fileID: 0}
 --- !u!4 &152195263
 Transform:
   m_ObjectHideFlags: 0
