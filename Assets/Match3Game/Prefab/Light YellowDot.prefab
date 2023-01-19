@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2b7d86e45e7d69d4d92d5655a179644f, type: 3}
-  m_Color: {r: 0.86274517, g: 0.9333334, b: 0.75294125, a: 1}
+  m_Color: {r: 0.9622642, g: 0.95903486, b: 0.23058024, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,6 +127,8 @@ MonoBehaviour:
   isColorBomb: 0
   isColumnBomb: 0
   isRowBomb: 0
+  isAdjacentBomb: 0
   rowArrowPrefab: {fileID: 9203293165197104762, guid: d4d363cea1f4b2d4ca9e5f45d6c8388d, type: 3}
   columnArrowPrefab: {fileID: 6136294295866354870, guid: 2ebfa9914b663914a9e4675fa45f4ab9, type: 3}
   colorBomb: {fileID: 889050144701455313, guid: 173ea057567c1f64591fc79e3b0950a7, type: 3}
+  adjacentMarker: {fileID: 3472473347505668669, guid: 8aba9f85cc40e39449b6664be456223d, type: 3}

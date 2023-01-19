@@ -29,9 +29,11 @@ public class Dot : MonoBehaviour
     public bool isColorBomb = false;
     public bool isColumnBomb = false;
     public bool isRowBomb = false;
+    public bool isAdjacentBomb = false;
     public GameObject rowArrowPrefab;
     public GameObject columnArrowPrefab;
     public GameObject colorBomb;
+    public GameObject adjacentMarker;
 
     // Start is called before the first frame update
     void Start()
@@ -55,9 +57,9 @@ public class Dot : MonoBehaviour
         if(Input.GetMouseButtonDown(1))
         {
             Debug.Log("Bomb Initialized");
-            isColorBomb = true;
-            GameObject colBomb = Instantiate(colorBomb, transform.position, Quaternion.identity);
-            colBomb.transform.parent = this.transform;
+            isAdjacentBomb = true;
+            GameObject marker = Instantiate(adjacentMarker, transform.position, Quaternion.identity);
+            marker.transform.parent = this.transform;
         }
     }
 
